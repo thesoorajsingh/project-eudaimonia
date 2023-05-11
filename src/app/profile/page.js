@@ -6,12 +6,12 @@ import MainBody from "./layouts/MainBody";
 import BodyContact from "./layouts/BodyContact";
 
 export default function Profile() {
-	return (
-		<>
-			<HeroProfile />
-			<Box mt={3}>
-				<MainBody />
-			</Box>
-		</>
-	);
+  return (
+    <>
+      <HeroProfile />
+      <Box mt={3}>
+        <MainBody />
+      </Box>
+    </>
+  );
 }
