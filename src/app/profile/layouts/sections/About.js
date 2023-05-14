@@ -4,6 +4,9 @@ import WhiteCard from "../../components/WhiteCard";
 import HeroMetric from "../../components/HeroMetric";
 import MutualAvatarGroup from "@/assets/mutualAvatarGroup2.png";
 import {
+  AddchartRounded,
+  AssistantRounded,
+  AutoGraphRounded,
   CurrencyRupeeRounded,
   HomeRepairServiceRounded,
   PeopleRounded,
@@ -19,6 +22,42 @@ function About() {
   const handleReadMore = () => {
     setReadMore(!readMore);
   };
+
+  const productsOffered = [
+    {
+      title: "20+ Mutual Funds",
+    },
+    {
+      title: "30+ Direct Equity",
+    },
+    {
+      title: "2+ Fixed Income",
+    },
+    {
+      title: "5+ Insurance",
+    },
+  ];
+
+  const investmentStrategy = [
+    {
+      icon: <AutoGraphRounded sx={{ color: "#00E3AB" }} />,
+      title: "Equity-equivalent returns from debt investments",
+      value:
+        "We generate equity-like returns from debt investments while protecting capital and customizing investment goals, payment frequency, and surplus input. Our debt solutions offer 4.5% to 9.2% high returns, ideal for balancing financial portfolios. HNIs and UHNIs benefit from early larger investments, gaining a delta advantage.",
+    },
+    {
+      icon: <AssistantRounded sx={{ color: "#0098E3" }} />,
+      title: "Tailored NRI Strategies",
+      value:
+        "Addressing country-specific financial challenges like inheritance tax, lower pensions, overtaxation, low yields, etc. We leverage diverse financial instruments and strategies to offer definitive solutions. For instance, we can help Indian-origin residents in Japan or the UK to minimize their estate's inheritance tax liability to just 10%.",
+    },
+    {
+      icon: <AddchartRounded sx={{ color: "#5600E3" }} />,
+      title: "Tax-Efficient Investment Strategies",
+      value:
+        "Our tax-efficient financial instruments go beyond country-specific norms, reducing tax outgo by at least 50%. Investment-led strategies tailored to your goals offer higher returns while lowering tax burdens. Our unique tax-saving philosophy uses investment horizons to create effective tax rates well below local tax authority limits.",
+    },
+  ];
 
   const metrics = useMemo(
     () => [
@@ -187,8 +226,68 @@ function About() {
 
       <Box mt={4}>
         <Typography variant={"labelMedium"}>Products</Typography>
-        <WhiteCard sx={{ marginTop: 1.5 }}>
-          <Image src={MutualAvatarGroup} alt={"some image"} />
+        <WhiteCard
+          sx={{
+            marginTop: 1.5,
+            padding: 2,
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          {productsOffered.map((product, index) => (
+            <Box display={"flex"} key={index} flexDirection={"column"} gap={1}>
+              <Image
+                src={MutualAvatarGroup}
+                style={{ maxWidth: "64px", maxHeight: "36px" }}
+                alt={"some image"}
+              />
+              <Typography variant={"labelSmall"}>{product.title}</Typography>
+            </Box>
+          ))}
+        </WhiteCard>
+      </Box>
+      <Box mt={4}>
+        <Typography variant={"labelMedium"}>Investment Strategies</Typography>
+        {investmentStrategy.map((strategy, index) => (
+          <WhiteCard
+            key={index}
+            sx={{
+              padding: 2,
+              marginY: 3,
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 1.5,
+            }}
+          >
+            <Box width={"24px"} height={"24px"}>
+              {strategy.icon}
+            </Box>
+            <Box display={"flex"} flexDirection={"column"} gap={1}>
+              <Typography variant={"labelSmall"}>{strategy.title}</Typography>
+              <Typography variant={"label"}>{strategy.value}</Typography>
+            </Box>
+          </WhiteCard>
+        ))}
+      </Box>
+      <Box mt={4}>
+        <Typography variant={"labelMedium"}>Education</Typography>
+        <WhiteCard sx={{ marginTop: 1.5, padding: 2 }}>
+          <Typography variant={"label"} color={theme.palette.text.label}>
+            1998-2001: Delhi University, Bachelor’s Degree <br />
+            2008-2010: Indira Gandhi University, Master’s Degree <br />
+            2014: SEBI/IRDA License 2017: Carlton Advanced Management Institute,
+            USA <br />
+            2017: National Institute of Securities Market - Investment Advisor
+            (Advanced), Equity & Debt
+          </Typography>
+        </WhiteCard>
+      </Box>
+      <Box mt={4}>
+        <Typography variant={"labelMedium"}>Work Experience</Typography>
+        <WhiteCard sx={{ marginTop: 1.5, padding: 2 }}>
+          <Typography variant={"label"} color={theme.palette.text.label}>
+            October 2009 - Present: Co-founder and CFO BigRaise Financial
+          </Typography>
         </WhiteCard>
       </Box>
     </Box>
