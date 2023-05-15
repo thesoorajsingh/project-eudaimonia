@@ -15,16 +15,16 @@ const isVerified = true;
 
 const tagsList = [
   {
-    title: "NRI Services",
+    title: "Goal based planning",
   },
   {
-    title: "Tax Efficient Solutions",
+    title: "Tax compliant solutions",
   },
   {
-    title: "Debt based products",
+    title: "Fast-track investment portfolio",
   },
   {
-    title: "Country specific strategies",
+    title: "Multi-product diversification",
   },
 ];
 

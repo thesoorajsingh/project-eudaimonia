@@ -69,7 +69,7 @@ function MainBody() {
       <Head>
         <title>{"Some random title"}</title>
       </Head>
-      <Box display={"flex"} justifyContent={"space-between"} gap={5}>
+      <Box display={"flex"} justifyContent={"space-between"} gap={5} pb={15}>
         <Box flex={0.8}>
           <Box mb={3} borderBottom={`1px solid ${theme.palette.text.label}`}>
             <Tabs
@@ -84,7 +84,7 @@ function MainBody() {
           </Box>
           <Box>{renderBodySection()}</Box>
         </Box>
-        <Box flex={0.2} display={"flex"} flexDirection={"column"}>
+        <Box flex={0.2} display={"flex"} flexDirection={"column"} mt={2}>
           <Typography variant="labelMedium" sx={{ marginBottom: 2 }}>
             Connect With the IFA
           </Typography>
