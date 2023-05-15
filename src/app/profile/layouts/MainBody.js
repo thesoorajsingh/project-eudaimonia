@@ -15,7 +15,30 @@ import {
 import Head from "next/head";
 
 function MainBody() {
-  const [tabValue, setTabValue] = useState(3);
+  const [tabValue, setTabValue] = useState(0);
+
+  const feeStructure = [
+    {
+      title: "Fixed Fee",
+      tag: "5-10k per month",
+      value: "Fixed fee component for our services",
+    },
+    {
+      title: "% from profits",
+      tag: "0.5-1% of profits",
+      value: "% of the profits we make for you, we’re in it as much as you!",
+    },
+    {
+      title: "% from AUM managed",
+      tag: "0.5-1% of profits",
+      value: "Fixed fee, as a % of AUM managed for our services",
+    },
+    {
+      title: "% commission from distribution",
+      tag: "0.5-1% of profits",
+      value: "Some products give us a % for distribution",
+    },
+  ];
 
   const handleTabChange = (e, newValue) => {
     setTabValue(newValue);
@@ -33,7 +56,7 @@ function MainBody() {
         return <Reviews />;
         break;
       case 3:
-        return <Fees />;
+        return <Fees feeStructure={feeStructure} />;
         break;
       default:
         return <About />;
