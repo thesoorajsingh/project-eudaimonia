@@ -5,7 +5,7 @@ import About from "./sections/About";
 import Offerings from "./sections/Offerings";
 import Reviews from "./sections/Reviews";
 import Fees from "./sections/Fees";
-import WhiteCard from "../components/WhiteCard";
+import WhiteCard from "@/app/profile/components/WhiteCard";
 import {
   CallRounded,
   EmailRounded,
@@ -70,8 +70,8 @@ function MainBody() {
         <title>{"Some random title"}</title>
       </Head>
       <Box display={"flex"} justifyContent={"space-between"} gap={5}>
-        <Box flex={0.7} maxWidth={"760px"}>
-          <Box mb={3}>
+        <Box flex={0.8}>
+          <Box mb={3} borderBottom={`1px solid ${theme.palette.text.label}`}>
             <Tabs
               value={tabValue}
               onChange={(e, newValue) => handleTabChange(e, newValue)}
@@ -84,8 +84,8 @@ function MainBody() {
           </Box>
           <Box>{renderBodySection()}</Box>
         </Box>
-        <Box flex={0.3} position={"relative"}>
-          <Typography variant="h6" sx={{ padding: 2 }}>
+        <Box flex={0.2} display={"flex"} flexDirection={"column"}>
+          <Typography variant="labelMedium" sx={{ marginBottom: 2 }}>
             Connect With the IFA
           </Typography>
           <WhiteCard

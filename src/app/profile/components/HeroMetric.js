@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import VerifiedUserRoundedIcon from "@mui/icons-material/VerifiedUserRounded";
 
 function HeroMetric({
@@ -6,6 +6,7 @@ function HeroMetric({
   title = "Title",
   value = "Value",
 }) {
+  const theme = useTheme();
   return (
     <Box
       display={"flex"}
@@ -20,7 +21,9 @@ function HeroMetric({
         justifyContent={"center"}
         alignItems={"flex-start"}
       >
-        <Typography variant={"label"}>{title}</Typography>
+        <Typography variant={"label"} color={theme.palette.text.label}>
+          {title}
+        </Typography>
         <Typography variant={"labelMedium"}>{value}</Typography>
       </Box>
     </Box>

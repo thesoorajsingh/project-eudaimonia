@@ -1,7 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import React, { useMemo } from "react";
-import WhiteCard from "../../components/WhiteCard";
-import HeroMetric from "../../components/HeroMetric";
+import WhiteCard from "@/app/profile/components/WhiteCard";
 import MutualAvatarGroup from "@/assets/mutualAvatarGroup2.png";
 import {
   AddchartRounded,
@@ -17,7 +16,8 @@ import Image from "next/image";
 
 function About() {
   const theme = useTheme();
-  const aboutAdvisor = `Meet Nitin Attri, a seasoned financial advisor with over 23 years of experience in Investments, Insurances and Wealth. As the Founder of BigRise Financial, Nitin leads a team that serves clients across 29+ countries. His expertise lies in NRI Investments, Health Insurances (global covers), Equity & Debt Investment Strategies, and all kinds of investment strategies for regulated products.`;
+  const aboutAdvisor = `Meet Gaurav Karnik, Founder of S9 Financial in Mumbai, with 12+ years experience in managing wealth for both clients and corporates.
+  He specialises in goal-based finance planning, insurance evaluation and estate disposition and his customised solutions cater to clients pan- India Read More`;
   const [readMore, setReadMore] = React.useState(true);
   const handleReadMore = () => {
     setReadMore(!readMore);
@@ -41,21 +41,21 @@ function About() {
   const investmentStrategy = [
     {
       icon: <AutoGraphRounded sx={{ color: "#00E3AB" }} />,
-      title: "Equity-equivalent returns from debt investments",
+      title: "Goal Based Investment Strategies",
       value:
-        "We generate equity-like returns from debt investments while protecting capital and customizing investment goals, payment frequency, and surplus input. Our debt solutions offer 4.5% to 9.2% high returns, ideal for balancing financial portfolios. HNIs and UHNIs benefit from early larger investments, gaining a delta advantage.",
+        "Our strategies are tailored to your unique goals and risk tolerance, ensuring that your investments are aligned with your long-term financial objectives.",
     },
     {
       icon: <AssistantRounded sx={{ color: "#0098E3" }} />,
-      title: "Tailored NRI Strategies",
+      title: "Tailored Financial Planning for NRIs",
       value:
-        "Addressing country-specific financial challenges like inheritance tax, lower pensions, overtaxation, low yields, etc. We leverage diverse financial instruments and strategies to offer definitive solutions. For instance, we can help Indian-origin residents in Japan or the UK to minimize their estate's inheritance tax liability to just 10%.",
+        "Consultation on NRI investment options when you are away from your country, can always present an outlook and safeguard your hard-earned money.",
     },
     {
       icon: <AddchartRounded sx={{ color: "#5600E3" }} />,
-      title: "Tax-Efficient Investment Strategies",
+      title: "Periodic Rebalance of Asset Allocation",
       value:
-        "Our tax-efficient financial instruments go beyond country-specific norms, reducing tax outgo by at least 50%. Investment-led strategies tailored to your goals offer higher returns while lowering tax burdens. Our unique tax-saving philosophy uses investment horizons to create effective tax rates well below local tax authority limits.",
+        "Our customized approach to asset allocation ensures a high-return, diversified portfolio that is tailored to your specific  goals, risk profile and its changing dynamics.",
     },
   ];
 
@@ -104,7 +104,7 @@ function About() {
     <Box my={3}>
       <WhiteCard sx={{ padding: 2 }}>
         <Box display={"flex"} flexDirection={"column"} gap={1}>
-          <Typography variant="labelMedium">About</Typography>
+          <Typography variant="labelMedium">A brief introduction</Typography>
           <Typography variant="labelXSmall" color={theme.palette.text.label}>
             {readMore ? aboutAdvisor.slice(0, 150) : aboutAdvisor}
             {readMore && "..."}
@@ -147,15 +147,15 @@ function About() {
         <Typography variant={"labelMedium"}>Location</Typography>
         <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
           <Box display={"flex"} justifyContent={"space-between"}>
-            <Box display={"flex"} flexDirection={"column"} gap={1.5}>
-              <Typography variant={"labelMedium"}>New Delhi</Typography>
+            <Box flex={0.8} display={"flex"} flexDirection={"column"} gap={1.5}>
+              <Typography variant={"labelMedium"}>Mumbai</Typography>
               <Typography variant={"label"}>
-                BigRaise Financial, 10, Level, E-5, 4, Malviya Nagar, New Delhi,
-                Delhi 110017{" "}
+                S9 Financial Planners City Of Joy, 825, Ecstasy Business Park,
+                JSD, Ashok Nagar, Mulund West, Mumbai, Maharashtra 400080
               </Typography>
               <Link
                 href={
-                  "https://goo.gl/maps/1xGF5MA624TyaZws5?coh=178571&entry=tt"
+                  "https://goo.gl/maps/vApTfG9eTyHwYyAU9?coh=178571&entry=tt"
                 }
                 style={{ color: theme.palette.primary.main, fontSize: "12px" }}
                 target="_blank"
@@ -168,6 +168,7 @@ function About() {
               justifyContent={"space-between"}
               alignItems={"center"}
               gap={5}
+              flex={0.4}
             >
               <Box
                 display={"flex"}
@@ -217,9 +218,9 @@ function About() {
               fontStyle: "italic",
             }}
           >
-            I am the best known IFA. I can offer 1000% returns on your
-            portfolio. I can do literally anything and everything for you. I
-            will be available 24*7 for all your needs.
+            I work with one insight for my clients “Failing to plan is planning
+            to fail” hence I help them in designing their financial goals right
+            from analysing the current situation to planning the future.
           </Typography>
         </WhiteCard>
       </Box>
@@ -273,12 +274,7 @@ function About() {
         <Typography variant={"labelMedium"}>Education</Typography>
         <WhiteCard sx={{ marginTop: 1.5, padding: 2 }}>
           <Typography variant={"label"} color={theme.palette.text.label}>
-            1998-2001: Delhi University, Bachelor’s Degree <br />
-            2008-2010: Indira Gandhi University, Master’s Degree <br />
-            2014: SEBI/IRDA License 2017: Carlton Advanced Management Institute,
-            USA <br />
-            2017: National Institute of Securities Market - Investment Advisor
-            (Advanced), Equity & Debt
+            2006-2009: R A Podar College, Bachelor of Commerce & Economincs
           </Typography>
         </WhiteCard>
       </Box>
@@ -286,7 +282,14 @@ function About() {
         <Typography variant={"labelMedium"}>Work Experience</Typography>
         <WhiteCard sx={{ marginTop: 1.5, padding: 2 }}>
           <Typography variant={"label"} color={theme.palette.text.label}>
-            October 2009 - Present: Co-founder and CFO BigRaise Financial
+            May 2011 - Present:{" "}
+            <strong>Co-Founder & Chief Financial Planner</strong> @ S9 Financial
+            Planners <br />
+            Sep 2020 - Present: <strong>Co-Founder</strong> @ Fortunexus Private
+            Limited
+            <br /> Dec 2020 - Present: <strong>Venture Partner</strong> @ ah!
+            Ventures <br />
+            Dec 2021 - Present: <strong>Education Mentor</strong> @ GrowthSchool
           </Typography>
         </WhiteCard>
       </Box>

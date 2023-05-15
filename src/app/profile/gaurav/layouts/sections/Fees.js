@@ -1,7 +1,7 @@
 import { Box, Divider, Typography, useTheme } from "@mui/material";
 import React from "react";
-import WhiteCard from "../../components/WhiteCard";
-import Tag from "../../components/Tag";
+import WhiteCard from "@/app/profile/components/WhiteCard";
+import Tag from "@/app/profile/components/Tag";
 
 function Fees({ feeStructure = [] }) {
   const theme = useTheme();

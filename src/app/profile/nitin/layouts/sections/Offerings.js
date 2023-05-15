@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import React from "react";
-import WhiteCard from "../../components/WhiteCard";
+import WhiteCard from "@/app/profile/components/WhiteCard";
 import PartnershipOne from "@/assets/partnershipOne.png";
 import PartnershipTwo from "@/assets/partnershipTwo.png";
 import PartnershipThree from "@/assets/partnershipThree.png";
