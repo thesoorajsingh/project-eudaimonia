@@ -54,5 +54,10 @@ export const theme = createTheme({
       fontWeight: "500",
       lineHeight: "21px",
     },
+    labelXSmall: {
+      fontSize: "10px",
+      fontWeight: "400",
+      lineHeight: "18px",
+    },
   },
 });

@@ -55,15 +55,15 @@ function Offerings() {
       <Box my={3} width={"100%"}>
         <Typography variant={"labelMedium"}>How we work</Typography>
         <Box mt={1.5} sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-          <WhiteCard flex={1} sx={{ minWidth: "45%", padding: 2 }}>
+          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
             <Typography variant={"labelSmall"}>No fee model</Typography>
           </WhiteCard>
-          <WhiteCard flex={1} sx={{ minWidth: "45%", padding: 2 }}>
+          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
             <Typography variant={"labelSmall"}>
               Quarterly Portfolio Review
             </Typography>
           </WhiteCard>
-          <WhiteCard flex={1} sx={{ minWidth: "45%", padding: 2 }}>
+          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
             <Typography variant={"labelSmall"}>
               Tax Optimised Strategies
             </Typography>

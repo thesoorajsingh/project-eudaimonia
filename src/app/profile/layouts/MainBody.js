@@ -15,7 +15,7 @@ import {
 import Head from "next/head";
 
 function MainBody() {
-  const [tabValue, setTabValue] = useState(1);
+  const [tabValue, setTabValue] = useState(3);
 
   const handleTabChange = (e, newValue) => {
     setTabValue(newValue);
