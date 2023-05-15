@@ -26,7 +26,7 @@ function Reviews({}) {
         value: "Product Understanding",
       },
       {
-        color: "#FFC471",
+        color: "#FFC47140",
         value: "Portfolio Analysis",
       },
     ],
