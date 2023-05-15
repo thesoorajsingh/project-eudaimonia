@@ -12,9 +12,10 @@ import {
   WhatsApp,
   WhatsappRounded,
 } from "@mui/icons-material";
+import Head from "next/head";
 
 function MainBody() {
-  const [tabValue, setTabValue] = useState(0);
+  const [tabValue, setTabValue] = useState(1);
 
   const handleTabChange = (e, newValue) => {
     setTabValue(newValue);
@@ -40,39 +41,46 @@ function MainBody() {
   };
 
   return (
-    <Box display={"flex"} justifyContent={"space-between"} gap={5}>
-      <Box flex={0.7} maxWidth={"760px"}>
-        <Box mb={3}>
-          <Tabs
-            value={tabValue}
-            onChange={(e, newValue) => handleTabChange(e, newValue)}
-          >
-            <Tab label="About" />
-            <Tab label="Offerings" />
-            <Tab label="Reviews" />
-            <Tab label="Fees" />
-          </Tabs>
+    <>
+      <Head>
+        <title>{"Some random title"}</title>
+      </Head>
+      <Box display={"flex"} justifyContent={"space-between"} gap={5}>
+        <Box flex={0.7} maxWidth={"760px"}>
+          <Box mb={3}>
+            <Tabs
+              value={tabValue}
+              onChange={(e, newValue) => handleTabChange(e, newValue)}
+            >
+              <Tab label="About" />
+              <Tab label="Offerings" />
+              <Tab label="Reviews" />
+              <Tab label="Fees" />
+            </Tabs>
+          </Box>
+          <Box>{renderBodySection()}</Box>
         </Box>
-        <Box>{renderBodySection()}</Box>
+        <Box flex={0.3} position={"relative"}>
+          <Typography variant="h6" sx={{ padding: 2 }}>
+            Connect With the IFA
+          </Typography>
+          <WhiteCard
+            sx={{
+              padding: 2,
+              display: "flex",
+              justifyContent: "flex-start",
+              gap: 2,
+              position: "sticky",
+              top: "100px",
+            }}
+          >
+            <EmailRounded sx={{ color: "#CC5858" }} />
+            <WhatsApp sx={{ color: "#00D23B" }} />
+            <CallRounded sx={{ color: "#64AFFA" }} />
+          </WhiteCard>
+        </Box>
       </Box>
-      <Box flex={0.3}>
-        <Typography variant="h6" sx={{ padding: 2 }}>
-          Connect With the IFA
-        </Typography>
-        <WhiteCard
-          sx={{
-            padding: 2,
-            display: "flex",
-            justifyContent: "flex-start",
-            gap: 2,
-          }}
-        >
-          <EmailRounded sx={{ color: "#CC5858" }} />
-          <WhatsApp sx={{ color: "#00D23B" }} />
-          <CallRounded sx={{ color: "#64AFFA" }} />
-        </WhiteCard>
-      </Box>
-    </Box>
+    </>
   );
 }
 
