@@ -105,7 +105,7 @@ function About() {
       <WhiteCard sx={{ padding: 2 }}>
         <Box display={"flex"} flexDirection={"column"} gap={1}>
           <Typography variant="labelMedium">About</Typography>
-          <Typography variant="label">
+          <Typography variant="labelXSmall" color={theme.palette.text.label}>
             {readMore ? aboutAdvisor.slice(0, 150) : aboutAdvisor}
             {readMore && "..."}
           </Typography>
@@ -114,7 +114,7 @@ function About() {
               variant="label"
               color="primary"
               onClick={handleReadMore}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", textDecoration: "underline" }}
             >
               {!readMore ? "Read Less" : "Read More"}
             </Typography>

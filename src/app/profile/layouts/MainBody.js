@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Box, Tabs, Tab, Typography, Fade } from "@mui/material";
+import { Box, Tabs, Tab, Typography, Fade, useTheme } from "@mui/material";
 import About from "./sections/About";
 import Offerings from "./sections/Offerings";
 import Reviews from "./sections/Reviews";
@@ -15,6 +15,7 @@ import {
 import Head from "next/head";
 
 function MainBody() {
+  const theme = useTheme();
   const [tabValue, setTabValue] = useState(0);
 
   const feeStructure = [
@@ -75,10 +76,10 @@ function MainBody() {
               value={tabValue}
               onChange={(e, newValue) => handleTabChange(e, newValue)}
             >
-              <Tab label="About" />
-              <Tab label="Offerings" />
-              <Tab label="Reviews" />
-              <Tab label="Fees" />
+              <Tab label="About" sx={{ textTransform: "none" }} />
+              <Tab label="Offerings" sx={{ textTransform: "none" }} />
+              <Tab label="Reviews" sx={{ textTransform: "none" }} />
+              <Tab label="Fees" sx={{ textTransform: "none" }} />
             </Tabs>
           </Box>
           <Box>{renderBodySection()}</Box>
@@ -91,15 +92,21 @@ function MainBody() {
             sx={{
               padding: 2,
               display: "flex",
+              flexDirection: "column",
               justifyContent: "flex-start",
               gap: 2,
               position: "sticky",
               top: "100px",
             }}
           >
-            <EmailRounded sx={{ color: "#CC5858" }} />
-            <WhatsApp sx={{ color: "#00D23B" }} />
-            <CallRounded sx={{ color: "#64AFFA" }} />
+            <Typography variant={"label"} color={theme.palette.text.label}>
+              Contact us
+            </Typography>
+            <Box display={"flex"} gap={2}>
+              <EmailRounded sx={{ color: "#CC5858" }} />
+              <WhatsApp sx={{ color: "#00D23B" }} />
+              <CallRounded sx={{ color: "#64AFFA" }} />
+            </Box>
           </WhiteCard>
         </Box>
       </Box>

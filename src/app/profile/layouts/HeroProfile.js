@@ -7,8 +7,9 @@ import LinkedinIcon from "../../../assets/icons/linkedin.png";
 import Tag from "../components/Tag";
 import VerifiedUserRoundedIcon from "@mui/icons-material/VerifiedUserRounded";
 import HomeRepairServiceRoundedIcon from "@mui/icons-material/HomeRepairServiceRounded";
-import CurrencyRupeeRoundedIcon from "@mui/icons-material/CurrencyRupeeRounded";
 import StarsRoundedIcon from "@mui/icons-material/StarsRounded";
+import { GroupAddRounded } from "@mui/icons-material";
+import Leaf from "@/assets/leafOnlyLogo.png";
 
 const isVerified = true;
 
@@ -29,22 +30,38 @@ const tagsList = [
 
 const metricsList = [
   {
-    icon: VerifiedUserRoundedIcon,
+    icon: (
+      <VerifiedUserRoundedIcon
+        sx={{ color: "#116441", width: "32px", height: "32px" }}
+      />
+    ),
     title: "SEBI Registration Number",
     value: "INH200007645",
   },
   {
-    icon: HomeRepairServiceRoundedIcon,
+    icon: (
+      <HomeRepairServiceRoundedIcon
+        sx={{ color: "#1E68B2", width: "32px", height: "32px" }}
+      />
+    ),
     title: "Experience",
     value: "14 Years",
   },
   {
-    icon: CurrencyRupeeRoundedIcon,
+    icon: (
+      <GroupAddRounded
+        sx={{ color: "#595959", width: "32px", height: "32px" }}
+      />
+    ),
     title: "Families Managed",
     value: "3000+",
   },
   {
-    icon: StarsRoundedIcon,
+    icon: (
+      <StarsRoundedIcon
+        sx={{ color: "#CC913E", width: "32px", height: "32px" }}
+      />
+    ),
     title: "Testimonials",
     value: "12+ Reviews",
   },
@@ -88,7 +105,9 @@ const DetailsSegment = () => {
             py={0.25}
             border={`1px solid ${theme.palette.border.green}`}
             borderRadius={"2px"}
+            gap={0.5}
           >
+            <Image src={Leaf} alt={"leaf logo"} />
             <Typography variant={"label"} color={theme.palette.text.label}>
               Verified
             </Typography>

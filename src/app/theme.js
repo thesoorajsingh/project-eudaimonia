@@ -39,10 +39,12 @@ export const theme = createTheme({
     h4: {
       fontSize: "26px",
       fontWeight: "600",
+      lineHeight: "39px",
     },
     label: {
       fontSize: "12px",
       fontWeight: "400",
+      lineHeight: "18px",
     },
     labelMedium: {
       fontSize: "16px",
@@ -55,7 +57,7 @@ export const theme = createTheme({
       lineHeight: "21px",
     },
     labelXSmall: {
-      fontSize: "10px",
+      fontSize: "12px",
       fontWeight: "400",
       lineHeight: "18px",
     },
