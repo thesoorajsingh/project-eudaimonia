@@ -1,8 +1,8 @@
 "use client";
 import { Box, useMediaQuery, ThemeProvider } from "@mui/material";
-import "../globals.css";
+import "@/app/globals.css";
 import { Readex_Pro } from "next/font/google";
-import { theme } from "../theme.js";
+import { theme } from "@/app/theme.js";
 
 const readex = Readex_Pro({ subsets: ["latin"] });
 

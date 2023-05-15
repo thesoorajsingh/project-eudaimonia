@@ -5,7 +5,7 @@ import About from "./sections/About";
 import Offerings from "./sections/Offerings";
 import Reviews from "./sections/Reviews";
 import Fees from "./sections/Fees";
-import WhiteCard from "../components/WhiteCard";
+import WhiteCard from "@/app/profile/components/WhiteCard";
 import {
   CallRounded,
   EmailRounded,

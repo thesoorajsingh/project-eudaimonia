@@ -1,10 +1,10 @@
 import { Avatar, Box, Typography, useTheme } from "@mui/material";
-import WhiteCard from "../components/WhiteCard";
-import HeroMetric from "../components/HeroMetric";
+import WhiteCard from "@/app/profile/components/WhiteCard";
+import HeroMetric from "@/app/profile/components/HeroMetric";
 import Image from "next/image";
-import HeroImage from "../../../assets/avatarImage.png";
-import LinkedinIcon from "../../../assets/icons/linkedin.png";
-import Tag from "../components/Tag";
+import HeroImage from "@/assets/avatarImage.png";
+import LinkedinIcon from "@/assets/icons/linkedin.png";
+import Tag from "@/app/profile/components/Tag";
 import VerifiedUserRoundedIcon from "@mui/icons-material/VerifiedUserRounded";
 import HomeRepairServiceRoundedIcon from "@mui/icons-material/HomeRepairServiceRounded";
 import StarsRoundedIcon from "@mui/icons-material/StarsRounded";

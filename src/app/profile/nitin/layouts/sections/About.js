@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import React, { useMemo } from "react";
-import WhiteCard from "../../components/WhiteCard";
-import HeroMetric from "../../components/HeroMetric";
+import WhiteCard from "@/app/profile/components/WhiteCard";
+import HeroMetric from "@/app/profile/components/HeroMetric";
 import MutualAvatarGroup from "@/assets/mutualAvatarGroup2.png";
 import {
   AddchartRounded,

@@ -1,5 +1,5 @@
 import React from "react";
-import RatingCard from "../../components/RatingCard";
+import RatingCard from "@/app/profile/components/RatingCard";
 import { Box } from "@mui/material";
 import dayjs from "dayjs";
 
