@@ -17,7 +17,8 @@ import Image from "next/image";
 
 function About() {
   const theme = useTheme();
-  const aboutAdvisor = `Meet Nitin Attri, a seasoned financial advisor with over 23 years of experience in Investments, Insurances and Wealth. As the Founder of BigRise Financial, Nitin leads a team that serves clients across 29+ countries. His expertise lies in NRI Investments, Health Insurances (global covers), Equity & Debt Investment Strategies, and all kinds of investment strategies for regulated products.`;
+  const aboutAdvisor = `Meet Viral Bhatt, Founder of Money Mantra in Mumbai, with 17+ years experience in personal finance investment solution space - from budgeting, maintaining networth and making tax efficient, sound investment decisions. 
+  He offers a unique approach to helping individuals to reach financial success leveraging 3 pillars - Financial security, Tax reduction and Inflation protection.  Read More`;
   const [readMore, setReadMore] = React.useState(true);
   const handleReadMore = () => {
     setReadMore(!readMore);
@@ -41,21 +42,21 @@ function About() {
   const investmentStrategy = [
     {
       icon: <AutoGraphRounded sx={{ color: "#00E3AB" }} />,
-      title: "Equity-equivalent returns from debt investments",
+      title: "Inflation Protection",
       value:
-        "We generate equity-like returns from debt investments while protecting capital and customizing investment goals, payment frequency, and surplus input. Our debt solutions offer 4.5% to 9.2% high returns, ideal for balancing financial portfolios. HNIs and UHNIs benefit from early larger investments, gaining a delta advantage.",
+        "Our strategies are tailored to protect against inflation, ensuring that your portfolio is positioned to weather changing economic conditions and preserve your purchasing power over the long term.",
     },
     {
       icon: <AssistantRounded sx={{ color: "#0098E3" }} />,
-      title: "Tailored NRI Strategies",
+      title: "Tax Efficient and Compliant",
       value:
-        "Addressing country-specific financial challenges like inheritance tax, lower pensions, overtaxation, low yields, etc. We leverage diverse financial instruments and strategies to offer definitive solutions. For instance, we can help Indian-origin residents in Japan or the UK to minimize their estate's inheritance tax liability to just 10%.",
+        "Strategies to help you  minimize your tax liabilities and maximize after-tax returns, while ensuring full compliance with applicable laws and regulations.",
     },
     {
       icon: <AddchartRounded sx={{ color: "#5600E3" }} />,
-      title: "Tax-Efficient Investment Strategies",
+      title: "Periodic Rebalance of Asset Allocation",
       value:
-        "Our tax-efficient financial instruments go beyond country-specific norms, reducing tax outgo by at least 50%. Investment-led strategies tailored to your goals offer higher returns while lowering tax burdens. Our unique tax-saving philosophy uses investment horizons to create effective tax rates well below local tax authority limits.",
+        "Our customized approach to asset allocation ensures a high-return, diversified portfolio that is tailored to your specific  goals, risk profile and its changing dynamics.",
     },
   ];
 
@@ -104,7 +105,7 @@ function About() {
     <Box my={3}>
       <WhiteCard sx={{ padding: 2 }}>
         <Box display={"flex"} flexDirection={"column"} gap={1}>
-          <Typography variant="labelMedium">About</Typography>
+          <Typography variant="labelMedium">A brief introduction</Typography>
           <Typography variant="labelXSmall" color={theme.palette.text.label}>
             {readMore ? aboutAdvisor.slice(0, 150) : aboutAdvisor}
             {readMore && "..."}
@@ -148,14 +149,15 @@ function About() {
         <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
           <Box display={"flex"} justifyContent={"space-between"}>
             <Box display={"flex"} flexDirection={"column"} gap={1.5}>
-              <Typography variant={"labelMedium"}>New Delhi</Typography>
+              <Typography variant={"labelMedium"}>Mumbai</Typography>
               <Typography variant={"label"}>
-                BigRaise Financial, 10, Level, E-5, 4, Malviya Nagar, New Delhi,
-                Delhi 110017{" "}
+                Office No 232, 2nd Floor, City Of Joy Ecstasy, JSD, near
+                Flyover, near Railway Station, Mulund West, Mumbai, Maharashtra
+                400080
               </Typography>
               <Link
                 href={
-                  "https://goo.gl/maps/1xGF5MA624TyaZws5?coh=178571&entry=tt"
+                  "https://goo.gl/maps/4fMkaAEQSa4SWkGC7?coh=178571&entry=tt"
                 }
                 style={{ color: theme.palette.primary.main, fontSize: "12px" }}
                 target="_blank"
@@ -179,7 +181,7 @@ function About() {
                 <Typography variant={"label"} color={theme.palette.text.label}>
                   Mon-Sat
                 </Typography>
-                <Typography variant={"label"}>9:30AM - 7:30PM</Typography>
+                <Typography variant={"label"}>9AM - 9PM</Typography>
               </Box>
               <Box
                 display={"flex"}
@@ -217,9 +219,11 @@ function About() {
               fontStyle: "italic",
             }}
           >
-            I am the best known IFA. I can offer 1000% returns on your
-            portfolio. I can do literally anything and everything for you. I
-            will be available 24*7 for all your needs.
+            I offer a unique approach to taking care of your financial life
+            right from the basics of budgeting, maintaining networth, making
+            tax-efficient, sound investment decisions and being tax compliant to
+            aligning savings such that your future financial aspirations and
+            commitments are met.
           </Typography>
         </WhiteCard>
       </Box>
@@ -264,7 +268,9 @@ function About() {
             </Box>
             <Box display={"flex"} flexDirection={"column"} gap={1}>
               <Typography variant={"labelSmall"}>{strategy.title}</Typography>
-              <Typography variant={"label"}>{strategy.value}</Typography>
+              <Typography variant={"label"} color={theme.palette.text.label}>
+                {strategy.value}
+              </Typography>
             </Box>
           </WhiteCard>
         ))}
@@ -273,12 +279,13 @@ function About() {
         <Typography variant={"labelMedium"}>Education</Typography>
         <WhiteCard sx={{ marginTop: 1.5, padding: 2 }}>
           <Typography variant={"label"} color={theme.palette.text.label}>
-            1998-2001: Delhi University, Bachelor’s Degree <br />
-            2008-2010: Indira Gandhi University, Master’s Degree <br />
-            2014: SEBI/IRDA License 2017: Carlton Advanced Management Institute,
-            USA <br />
-            2017: National Institute of Securities Market - Investment Advisor
-            (Advanced), Equity & Debt
+            2006-2007: Post Graduation in Financial Planning from{" "}
+            <strong>International College of Financial Planning</strong> <br />
+            2007-2008: <strong>Derivatives & Capital Markets</strong>{" "}
+            Certification from <strong>NISM</strong>
+            <br />
+            2007-2008: <strong>Retirement readiness</strong> certification from
+            <strong>NISM</strong>
           </Typography>
         </WhiteCard>
       </Box>
@@ -286,7 +293,17 @@ function About() {
         <Typography variant={"labelMedium"}>Work Experience</Typography>
         <WhiteCard sx={{ marginTop: 1.5, padding: 2 }}>
           <Typography variant={"label"} color={theme.palette.text.label}>
-            October 2009 - Present: Co-founder and CFO BigRaise Financial
+            May 2022 - Present:{" "}
+            <strong>
+              Advisory Committee for Qualified Financial Advisors - Chairman
+            </strong>{" "}
+            @ 1 Finance
+            <br /> Feb 2014 - Present: <strong>Co-Founder</strong> @ Money
+            Mantra <br />
+            Jan 2010 - Dec 2010: <strong>Wealth Manager</strong> @ Karvy Private
+            Wealth <br />
+            Sep 2007 - Dec 2010: <strong>Financial Planner</strong> - Branch
+            Head @ Bajaj Capital Ltd
           </Typography>
         </WhiteCard>
       </Box>

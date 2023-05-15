@@ -2,7 +2,7 @@ import { Avatar, Box, Typography, useTheme } from "@mui/material";
 import WhiteCard from "@/app/profile/components/WhiteCard";
 import HeroMetric from "@/app/profile/components/HeroMetric";
 import Image from "next/image";
-import HeroImage from "@/assets/avatarImage.png";
+import HeroImage from "@/assets/avatarImageViral.png";
 import LinkedinIcon from "@/assets/icons/linkedin.png";
 import Tag from "@/app/profile/components/Tag";
 import VerifiedUserRoundedIcon from "@mui/icons-material/VerifiedUserRounded";
@@ -94,7 +94,7 @@ const DetailsSegment = () => {
   return (
     <Box height={"fit-content"} width={"80%"}>
       <Box display={"flex"} alignItems={"center"} gap={1}>
-        <Typography variant="h4">Nitin Attri</Typography>
+        <Typography variant="h4">Viral Bhatt</Typography>
 
         {isVerified && (
           <Box

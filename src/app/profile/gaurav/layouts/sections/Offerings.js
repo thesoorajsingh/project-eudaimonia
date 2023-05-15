@@ -7,19 +7,6 @@ import PartnershipThree from "@/assets/partnershipThree.png";
 import PartnershipFour from "@/assets/partnershipFour.png";
 import Image from "next/image";
 
-{
-  /* <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
-            <Typography variant={"labelSmall"}>
-              Quarterly Portfolio Review
-            </Typography>
-          </WhiteCard>
-          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
-            <Typography variant={"labelSmall"}>
-              Tax Optimised Strategies
-            </Typography>
-          </WhiteCard> */
-}
-
 function Offerings() {
   const howWeWork = [
     "Semi annual review",
