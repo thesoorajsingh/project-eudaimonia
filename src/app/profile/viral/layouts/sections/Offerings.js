@@ -9,18 +9,25 @@ import Image from "next/image";
 
 function Offerings() {
   const theme = useTheme();
+
+  const howWeWork = [
+    "Periodic risk assessment",
+    "Goal management",
+    "Multi-asset allocation approach",
+    "Budget and Tax planning",
+  ];
+
   return (
     <Box my={3}>
       <Typography variant={"labelMedium"}>We can advise you on</Typography>
       <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
         <Box display={"flex"} flexDirection={"column"} gap={1}>
           <Typography variant="labelMedium">
-            Equity products - Mutual Funds, IPOs
+            Equity Products - Mutual Funds and Direct Equity
           </Typography>
           <Typography variant="label" color={theme.palette.text.label}>
-            We offer a wide range of equity products including Mutual Funds and
-            IPOs. We help clients invest in the best performing funds and IPOs
-            to help diversify their portfolio and maximize returns.
+            We help you identify the best performing stocks and mutual funds
+            basis your various financial goals in collaboration with Angel One.
           </Typography>
         </Box>
       </WhiteCard>
@@ -40,34 +47,27 @@ function Offerings() {
       <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
         <Box display={"flex"} flexDirection={"column"} gap={1}>
           <Typography variant="labelMedium">
-            Wealth products - PMS, AIF, Startup Investments, Auto-trading,
-            Global Investments
+            Insurance and Loan Services
           </Typography>
           <Typography variant="label" color={theme.palette.text.label}>
-            Our wealth products suite includes Portfolio Management Services
-            (PMS), Alternative Investment Funds (AIF), Startup Investments,
-            Auto-trading, and Global Investments. Our team of experienced
-            professionals use their expertise to help clients grow and preserve
-            their wealth while minimizing risk.
+            Money Mantra helps our customers with both life and non-life
+            insurance products and a variety of loan services such as Home
+            Loans, Personal Loans and Business Loans
           </Typography>
         </Box>
       </WhiteCard>
       <Box my={3} width={"100%"}>
         <Typography variant={"labelMedium"}>How we work</Typography>
         <Box mt={1.5} sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
-            <Typography variant={"labelSmall"}>No fee model</Typography>
-          </WhiteCard>
-          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
-            <Typography variant={"labelSmall"}>
-              Quarterly Portfolio Review
-            </Typography>
-          </WhiteCard>
-          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
-            <Typography variant={"labelSmall"}>
-              Tax Optimised Strategies
-            </Typography>
-          </WhiteCard>
+          {howWeWork.map((i, index) => (
+            <WhiteCard
+              key={index}
+              flex={1}
+              sx={{ minWidth: "48%", padding: 2 }}
+            >
+              <Typography variant={"labelSmall"}>{i}</Typography>
+            </WhiteCard>
+          ))}
         </Box>
       </Box>
       <Box my={3} width={"100%"}>
