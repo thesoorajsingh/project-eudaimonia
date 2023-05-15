@@ -7,58 +7,8 @@ import PartnershipThree from "@/assets/partnershipThree.png";
 import PartnershipFour from "@/assets/partnershipFour.png";
 import Image from "next/image";
 
-function Offerings() {
-  const theme = useTheme();
-  return (
-    <Box my={3}>
-      <Typography variant={"labelMedium"}>We can advise you on</Typography>
-      <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
-        <Box display={"flex"} flexDirection={"column"} gap={1}>
-          <Typography variant="labelMedium">
-            Equity products - Mutual Funds, IPOs
-          </Typography>
-          <Typography variant="label" color={theme.palette.text.label}>
-            We offer a wide range of equity products including Mutual Funds and
-            IPOs. We help clients invest in the best performing funds and IPOs
-            to help diversify their portfolio and maximize returns.
-          </Typography>
-        </Box>
-      </WhiteCard>
-      <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
-        <Box display={"flex"} flexDirection={"column"} gap={1}>
-          <Typography variant="labelMedium">
-            Fixed Income products - P2P, Bonds, Commercial Paper
-          </Typography>
-          <Typography variant="label" color={theme.palette.text.label}>
-            We offer various fixed income products such as P2P lending, Bonds,
-            and Commercial Paper. These products provide our clients with stable
-            returns and help mitigate risks in their overall investment
-            strategy.
-          </Typography>
-        </Box>
-      </WhiteCard>
-      <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
-        <Box display={"flex"} flexDirection={"column"} gap={1}>
-          <Typography variant="labelMedium">
-            Wealth products - PMS, AIF, Startup Investments, Auto-trading,
-            Global Investments
-          </Typography>
-          <Typography variant="label" color={theme.palette.text.label}>
-            Our wealth products suite includes Portfolio Management Services
-            (PMS), Alternative Investment Funds (AIF), Startup Investments,
-            Auto-trading, and Global Investments. Our team of experienced
-            professionals use their expertise to help clients grow and preserve
-            their wealth while minimizing risk.
-          </Typography>
-        </Box>
-      </WhiteCard>
-      <Box my={3} width={"100%"}>
-        <Typography variant={"labelMedium"}>How we work</Typography>
-        <Box mt={1.5} sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
-            <Typography variant={"labelSmall"}>No fee model</Typography>
-          </WhiteCard>
-          <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
+{
+  /* <WhiteCard flex={1} sx={{ minWidth: "48%", padding: 2 }}>
             <Typography variant={"labelSmall"}>
               Quarterly Portfolio Review
             </Typography>
@@ -67,7 +17,67 @@ function Offerings() {
             <Typography variant={"labelSmall"}>
               Tax Optimised Strategies
             </Typography>
-          </WhiteCard>
+          </WhiteCard> */
+}
+
+function Offerings() {
+  const howWeWork = [
+    "Semi annual review",
+    "Periodic rebalancing",
+    "Dedicated planner assigned",
+    "Goal based recommendations",
+  ];
+  const theme = useTheme();
+  return (
+    <Box my={3}>
+      <Typography variant={"labelMedium"}>We can advise you on</Typography>
+      <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
+        <Box display={"flex"} flexDirection={"column"} gap={1}>
+          <Typography variant="labelMedium">
+            Comprehensive Financial Planning
+          </Typography>
+          <Typography variant="label" color={theme.palette.text.label}>
+            We provide financial advisory services and are a one-stop solution
+            to all your financial problems with a detailed analysis of the given
+            situation.
+          </Typography>
+        </Box>
+      </WhiteCard>
+      <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
+        <Box display={"flex"} flexDirection={"column"} gap={1}>
+          <Typography variant="labelMedium">
+            Second Opinion on Finance
+          </Typography>
+          <Typography variant="label" color={theme.palette.text.label}>
+            It is a one-time investment advisory service that helps you resolve
+            financial queries pertaining to your existing portfolio.
+          </Typography>
+        </Box>
+      </WhiteCard>
+      <WhiteCard sx={{ padding: 2, marginTop: 1.5 }}>
+        <Box display={"flex"} flexDirection={"column"} gap={1}>
+          <Typography variant="labelMedium">
+            Financial Planning for NRI
+          </Typography>
+          <Typography variant="label" color={theme.palette.text.label}>
+            Consultation on NRI investment options when you are away from your
+            country, can always present an outlook and safeguard your
+            hard-earned money.
+          </Typography>
+        </Box>
+      </WhiteCard>
+      <Box my={3} width={"100%"}>
+        <Typography variant={"labelMedium"}>How we work</Typography>
+        <Box mt={1.5} sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+          {howWeWork.map((i, index) => (
+            <WhiteCard
+              key={index}
+              flex={1}
+              sx={{ minWidth: "48%", padding: 2 }}
+            >
+              <Typography variant={"labelSmall"}>{i}</Typography>
+            </WhiteCard>
+          ))}
         </Box>
       </Box>
       <Box my={3} width={"100%"}>
